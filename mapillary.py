@@ -147,8 +147,8 @@ def organize_sequences(data):
 
 
 if __name__ == '__main__':
-    first_time = False
-    json_filename = "images_in_bbox_1.json"
+    first_time = True
+    json_filename = "images_in_bbox.json"
     dataset_filename = "output.json"
 
     if first_time:
@@ -156,7 +156,7 @@ if __name__ == '__main__':
     else:    
         with open(json_filename, mode='r') as c:
             data = json.load(c)
-    first_time = False
+   
     if first_time:
         dataset_data = download_dataset(data)
     else:
